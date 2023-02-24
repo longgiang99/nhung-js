@@ -6,17 +6,40 @@
 </head>
 <body>
 <form>
-    <p>
-        <label>Fahrenheit</label>
-        <input id="inputFahrenheit" type="number"
-               oninput="temperatureConverter(this.value)"
-               onchange="temperatureConverter(this.value)">
-    </p>
-    <p>Celsius: <span id="outputCelsius"></span></p>
-</form>
+    <table border="1">
+        <tr>
+            <td>amount</td>
+            <td>from currency</td>
+            <td>to currency</td>
 
+        </tr>
+        <tr style="text-align: right">
+            <td><input type="text"  id="cn"></td>
+            <td>
+                <select name="currency" id=”from” >
+                    <option value=”1”>vietnam</option>
+                    <option value=”2”>american</option>
+                </select>
+            </td>
+            <td>
+                <select name="currency" id="to">
+                    <option value="1">usd</option>
+                    <option value="2">vnd</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="convert()">convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="resul"></p>
+</form>
+<script>
+    function convert() {
+        let inputnumber = parseInt(document.getElementById("cn").value)
+        let resul = (inputnumber/2).toFixed(2);
+        document.getElementById('resul').innerHTML = 'resul' + resul ;
+    }
+</script>
 </body>
 </html>
-<script src="toantu.js">
-
-</script>

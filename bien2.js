@@ -8,3 +8,4 @@ a = parseInt(a);
 b = parseInt(b);
 // in ket qua ra man hinh
 document.write("Phần dư khi chia hai số " + a + " và " + b + " là " + (a % b) + "<br/>");
+selected=”selected”
