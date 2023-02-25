@@ -1,10 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>caculator</title>
 </head>
 <body>
-$END$
+<h1>caculator</h1>
+<table>
+
+    <tr>
+    <td><input type="number"  id="bang1"></td>
+    <td><input type="number"  id="bang2"></td>
+    </tr>
+
+
+</table>
+<br>
+    <table>
+    <tr>
+<!--        /*viết hàm onclick nhớ viết đóng mở()-->
+<!--        cách hiển thị nút nhấn mang dòng chữ mình cần-->
+<!--        onclick="cong() onclick là hàm, "cong()" là id*/-->
+
+       <td><button type="button" onclick="cong()">cong</button></td>
+        <td><button onclick="tru()">tru</button></td>
+        <td><button onclick="nhan()">nhan</button></td>
+        <td><button onclick="chia()">chia</button></td>
+    </tr>
+    </table>
+
+<!--đặt id  để tí nũa gọi nó trong script-->
+
+<p id="result">ket qua:</p>
+
+<script>
+    // khai báo hàm function và gọi id trên nút nhấn cộng trừ nhân chia
+    function cong(){
+        //khai báo và chuyển đổi từ text sang số ở ô nhập vào giá trị
+        let bang1 = parseFloat(document.getElementById('bang1').value);
+        let bang2 = parseFloat(document.getElementById('bang2').value);
+        //khai báo biểu thức toán tử
+        let result= bang1 + bang2
+    //gọi hàm document.getElementById(') để hiện thị kết quả bằng .innerHTML
+        document.getElementById('result').innerHTML=  result;
+    }
+    function tru(){
+        //khai báo và chuyển đổi từ text sang số ở ô nhập vào giá trị
+        let bang1 = parseFloat(document.getElementById('bang1').value);
+        let bang2 = parseFloat(document.getElementById('bang2').value);
+        //khai báo biểu thức toán tử
+        let result= bang1 - bang2
+        //gọi hàm document.getElementById(') để hiện thị kết quả bằng .innerHTML
+        document.getElementById('result').innerHTML=  result;
+    }
+    function nhan(){
+        //khai báo và chuyển đổi từ text sang số ở ô nhập vào giá trị
+        let bang1 = parseFloat(document.getElementById('bang1').value);
+        let bang2 = parseFloat(document.getElementById('bang2').value);
+        //khai báo biểu thức toán tử
+        let result= bang1 * bang2
+        //gọi hàm document.getElementById(') để hiện thị kết quả bằng .innerHTML
+        document.getElementById('result').innerHTML=  result;
+    }
+    function chia(){
+        //khai báo và chuyển đổi từ text sang số ở ô nhập vào giá trị
+        let bang1 = parseFloat(document.getElementById('bang1').value);
+        let bang2 = parseFloat(document.getElementById('bang2').value);
+        //khai báo biểu thức toán tử
+        let result= bang1 / bang2
+        //gọi hàm document.getElementById(') để hiện thị kết quả bằng .innerHTML
+        document.getElementById('result').innerHTML=  result;
+    }
+
+
+</script>
+
 </body>
 </html>
